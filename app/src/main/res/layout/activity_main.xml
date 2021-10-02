@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="6dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/tv_main_activity_start_station"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/iv_main_activity_swap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="重庆西" />
+
+            <ImageView
+                android:id="@+id/iv_main_activity_swap"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingHorizontal="10dp"
+                android:src="@drawable/ic_wifi_protected_setup_main_color_2_24"
+                app:layout_constraintEnd_toStartOf="@id/tv_main_activity_destination_station"
+                app:layout_constraintStart_toEndOf="@id/tv_main_activity_start_station"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_main_activity_destination_station"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_main_activity_swap"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="济南西" />
+
+            <TextView
+                android:id="@+id/tv_main_activity_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="12dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_main_activity_start_station"
+                tools:text="2021年10月1日" />
+
+            <Button
+                android:id="@+id/btn_main_activity_search_route"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="6dp"
+                android:paddingVertical="10dp"
+                android:text="@string/search_route"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_main_activity_date" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.skyd.easyrailway.view.component.ViewPager2View
+        android:id="@+id/vp2_main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">铁路易行</string>
+    <string name="search_route">查询线路</string>
+    <string name="unknown_view_holder">未知类型的模块！</string>
+</resources>

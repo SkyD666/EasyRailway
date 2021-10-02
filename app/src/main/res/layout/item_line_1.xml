@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="10dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_line_1_start_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toStartOf="@id/tv_line_1_train_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="07:18" />
+
+            <TextView
+                android:id="@+id/tv_line_1_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_line_1_start_time"
+                tools:text="淄博" />
+
+            <TextView
+                android:id="@+id/tv_line_1_train_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/tv_line_1_start_time"
+                app:layout_constraintEnd_toStartOf="@id/tv_line_1_destination_time"
+                app:layout_constraintStart_toEndOf="@id/tv_line_1_start_time"
+                app:layout_constraintTop_toTopOf="@id/tv_line_1_start_time"
+                tools:text="7053" />
+
+            <View
+                android:id="@+id/view_line_1_split"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_marginTop="2dp"
+                android:background="@color/gray_1"
+                app:layout_constraintEnd_toEndOf="@id/tv_line_1_train_number"
+                app:layout_constraintStart_toStartOf="@id/tv_line_1_train_number"
+                app:layout_constraintTop_toBottomOf="@id/tv_line_1_train_number" />
+
+            <TextView
+                android:id="@+id/tv_line_1_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@id/tv_line_1_train_number"
+                app:layout_constraintStart_toStartOf="@id/tv_line_1_train_number"
+                app:layout_constraintTop_toBottomOf="@id/view_line_1_split"
+                tools:text="4时20分" />
+
+            <TextView
+                android:id="@+id/tv_line_1_destination_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_line_1_train_number"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="11:38" />
+
+            <TextView
+                android:id="@+id/tv_line_1_destination"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_line_1_destination_time"
+                tools:text="泰山" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:gravity="center_vertical"
+            android:text="￥"
+            android:textColor="@color/main_color_2"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_line_1_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textColor="@color/main_color_2"
+            android:textSize="20sp"
+            tools:text="11.5" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
